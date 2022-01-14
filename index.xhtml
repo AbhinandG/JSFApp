@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Netflix DB</title>
+        <link rel="stylesheet" type="text/css" href="cssfile.css" media="all" />
+    </h:head>
+    <h:body>
+        <center>
+        <h:form>
+            <h:outputText value="Search Using Actor/Actress Name:   ">
+            </h:outputText>
+            <h:inputText value="#{netflixShow.searchActor}">
+            <f:ajax execute="searchActorVal" event="keyup" render="netflixTable"/>
+            </h:inputText>
+            <br></br>
+            <br></br>
+            <div class="addform">
+        <h:dataTable id="netflixTable" value="#{netflixShow.getSpecificRecords(netflixShow.searchActor)}" 
+                     var="record"
+                     rowClasses="oddRows,evenRows"
+                     headerClass="header" styleClass="table" 
+                     cellpadding="5" cellspacing="0" border="0">
+            <h:column>
+                <f:facet name="header">NAME</f:facet>
+                #{record.nameOfShow}
+            </h:column>
+            <h:column>
+                <f:facet name="header">GENRE</f:facet>
+                #{record.genreOfShow}
+            </h:column>
+            <h:column>
+                <f:facet name="header">ACTOR/ACTRESS</f:facet>
+                #{record.leadActorOfShow}
+            </h:column>
+            <h:column>
+                <f:facet name="header">TYPE</f:facet>
+                #{record.typeOfShow}
+            </h:column>
+            <h:column>
+                <f:facet name="header"></f:facet>
+                <h:commandButton action="#{netflixShow.deleteRecord(record.nameOfShow)}" value="Delete " class="btn"/>
+            </h:column>
+        </h:dataTable>
+            </div>
+        </h:form>
+        <div class="addform">    
+        <h:outputLink value="addNew.xhtml" class="linkval">Add New Instance</h:outputLink>
+        </div>
+        </center>
+    </h:body>
+</html>
+

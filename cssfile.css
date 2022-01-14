@@ -1,0 +1,91 @@
+.hdr1{
+            background-color:#84d9ad;
+            box-shadow: rgba(143, 143, 143, 0.705) 2px 4px 10px;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-left: 500px;
+            margin-right: 500px;
+            text-align: center;
+            border-radius: 10px 10px 10px 10px;
+            filter:brightness(95%);
+            padding: 10px 30px 20px 30px;
+            line-height: 30px;
+        }
+        
+.addform{
+            box-shadow: rgba(143, 143, 143, 0.705) 2px 4px 10px;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-left: 400px;
+            margin-right: 450px;
+            text-align: center;
+            border-radius: 10px 10px 10px 10px;
+            filter:brightness(95%);
+            padding: 10px 30px 20px 30px;
+            line-height: 30px;
+        }
+        
+.addform2{
+            box-shadow: rgba(143, 143, 143, 0.705) 2px 4px 10px;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-left: 500px;
+            margin-right: 500px;
+            text-align: center;
+            border-radius: 10px 10px 10px 10px;
+            filter:brightness(95%);
+            padding: 10px 30px 20px 30px;
+            line-height: 30px;
+        }
+        
+.btx{
+            background-color:#84d9ad;
+            border-radius: 5px;
+            height:55px;
+        }
+        
+.btx:hover{
+            cursor:pointer;
+            opacity:0.6;
+        }
+        
+.oddRows{
+            background:none repeat scroll 0 0 #84d9ad;
+            text-align:center;
+        }
+        
+.evenRows{
+            text-align:center;
+            background:none repeat scroll 0 0 #baffdb;
+        }
+        
+.header{
+            text-align:center;
+            color: white;
+            background:none repeat scroll 0 0 #305240;
+        }
+        
+.oddRows:hover{
+            opacity:0.8;
+        }
+        
+.evenRows:hover{
+            opacity:0.8;
+        }
+        
+.btn{
+            background-color: red;
+            color:white;
+            border-radius:5px;
+            height:30px;
+        }
+        
+.btn:hover{
+            cursor:pointer;
+        }
+
+.linkval{
+            color:#305240;
+            text-decoration: none;
+            font-size: 20px;
+        }

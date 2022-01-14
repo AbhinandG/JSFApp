@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Add New Record</title>
+        <link rel="stylesheet" type="text/css" href="cssfile.css" media="all" />
+    </h:head>
+    <h:body>
+        <center>
+        <div class="hdr1">   
+            <h1>Add a new Show/Movie!</h1>
+        </div>
+        <div class="addform2">
+        <h:form>
+            <h:outputText value="Name: " />
+            <h:inputText id="nameInputText" required="true"
+                         requiredMessage="Enter name of show!"
+                         value="#{netflixShow.nameOfShow}">
+            </h:inputText>
+            <br></br>
+            <br></br>
+            <h:outputText value="Genre: " />
+            <h:selectOneMenu id="genreSelectMenu" value="#{netflixShow.genreOfShow}">
+                <f:selectItem itemValue="Horror"
+                              itemLabel="Horror"/>
+                <f:selectItem itemValue="Comedy" itemLabel="Comedy"/>  
+                <f:selectItem itemValue="Romance"
+                              itemLabel="Romance"/> 
+                <f:selectItem itemValue="Rom-Com"
+                              itemLabel="Rom-Com"/>
+                <f:selectItem itemValue="Thriller"
+                              itemLabel="Thriller"/>
+                <f:selectItem itemValue="Documentary"
+                              itemLabel="Documentary"/>
+            </h:selectOneMenu>
+            <br></br>
+            <br></br>
+            <h:outputText value="Lead Actor: " />
+            <h:inputText id="actorInputText" required="true"
+                         requiredMessage="Enter Lead Actor!"
+                         value="#{netflixShow.leadActorOfShow}">
+            </h:inputText>
+            <br></br>
+            <br></br>
+            <h:outputText value="Type: " />
+            <h:selectOneMenu id="typeSelectMenu" value="#{netflixShow.typeOfShow}">
+                <f:selectItem itemValue="Movie"
+                              itemLabel="Movie"/>
+                <f:selectItem itemValue="Series"
+                              itemLabel="Series"/>                             
+            </h:selectOneMenu>
+            <br></br>
+            <br></br>
+            <h:commandButton value="Add Record"
+                             action="#{netflixShow.addRecord()}"
+                             class="btx"/>
+        </h:form>
+        <br></br>
+        <h:outputLink value="index.xhtml">View All Records</h:outputLink>
+        </div>
+        </center>
+    </h:body>
+</html>
+
